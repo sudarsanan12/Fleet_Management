@@ -1,0 +1,34 @@
+<templates xml:space="preserve">
+
+
+    <t t-name="MapView" owl="1">
+        <div id="main-container">
+
+        <div class='mapController'>
+            <div class='header-content'>
+                <h2 ><label>Select the Drivers</label></h2>
+
+            </div>
+            <div class="selection-container">
+                <select class="chosen-select" id="driver_selection" >
+                </select>
+
+            </div>
+
+        
+
+        </div>
+
+            <!-- <span class="btn slider-controller fa fa-arrow-circle-right" id="show-slider"> -->
+            <!-- </span> -->
+
+            <!-- <span class="btn slider-controller fa fa-chevron-circle-left"
+            id="hide-slider"></span> -->
+
+
+            <!-- </div> -->
+            <div id="map"></div>
+
+        </div>
+    </t>
+</templates>

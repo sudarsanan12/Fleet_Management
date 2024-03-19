@@ -1,0 +1,31 @@
+<odoo>
+        <record id="menu_map_web_page" model="website.menu" >
+            <field name="name">View Map</field>
+            <field name="url">/view-location</field>
+            <field name="parent_id" ref="website.main_menu" />
+            <field name="sequence" type="int">3</field>
+        </record>
+        <template id="map_view_template">
+            <t t-call="website.layout">
+                
+                <!-- <t t-foreach="data" t-as="data">
+                    <div id="latitude"><t t-esc="data.lat"/></div>
+                    <div id="longitude"><t t-esc="data.lng"/></div>
+
+                </t> -->
+                <script t-att-src="maps_script_url" />
+
+                <div class="oe_structure">
+                    <div >
+                        <div id="map"></div>
+                    </div>
+                    
+                </div>
+
+            </t>
+        </template>
+        <template id="footer_custom1" inherit_id="website.layout" name="Default" active="True">
+            <xpath expr="//div[@id='footer']" position="replace">
+            </xpath>
+        </template>
+</odoo>

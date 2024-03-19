@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_gmaps" name="Google Maps Assets">
+        <t t-set="google_maps_api_key" t-value="request.env['ir.config_parameter'].sudo().get_param('pragmatic_fleet_management.google_api_key')"/>
+        <t t-if="google_maps_api_key">
+                <script t-att-src="'https://maps.googleapis.com/maps/api/js?key=' + google_maps_api_key + '&amp;libraries=places'"/>
+        </t>
+        <t t-else="">
+            <script src="https://maps.googleapis.com/maps/api/js&amp;libraries=places"/>
+        </t>
+    </template>
+
+    <template id="webclient_bootstrap" name="webclient_bootstrap gmaps" inherit_id="web.webclient_bootstrap">
+        <xpath expr="//t[@t-call='web.conditional_assets_tests']" position="before">
+            <t t-call="pragmatic_fleet_management.assets_gmaps"/>
+        </xpath>
+    </template>
+</odoo>

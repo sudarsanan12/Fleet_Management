@@ -1,0 +1,66 @@
+.info-content {
+    // background-color: #4285F4;
+    display: flex;
+    width: 250px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 14px;
+    position: relative;
+  }
+  
+  .info-content::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    // border-top: 8px solid #4285F4;
+  }
+  .header-content {
+    top: 100px;
+  }
+
+  // .mult-select-tag {
+  //   position: absolute;
+  //   // left: 20px;
+  //   // right: 10px;
+  //   top: 100px;
+  //   width: 10%;
+  //   height: auto;
+  // }
+
+  .map_image {
+    height: 50px;
+    width: auto;
+    border-radius: 5px;
+  }
+
+  .driver_name {
+    padding: 10px 10px;
+  }
+
+  .vehecle_number {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+  }
+
+
+  .mult-select-tag .body {
+    margin-top: 100px;
+    margin-left: 10px;
+    // border: 1px solid var(--border-color);
+    // background: #fff;
+    // top: 100px;
+    // min-height: 2.15rem;
+    // width: 100%;
+    // height: auto;
+    // left: 5%;
+    // right: 5%;
+    min-width: 90%;
+    max-width: 90%;
+  }

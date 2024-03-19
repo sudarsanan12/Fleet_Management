@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <record id="action_owl_map_view" model="ir.actions.client">
+            <field name="name">Map View</field>
+            <field name="tag">owl.map_view</field>
+        </record>
+
+            <menuitem
+                id="menu_map_view_dashboard"
+                name="Map view"
+                action="action_owl_map_view"
+                parent="main_menu_fleet_dashboard"
+                sequence="5"
+                groups="pragmatic_fleet_management.group_admin"
+                 />
+    </data>
+   
+</odoo>
